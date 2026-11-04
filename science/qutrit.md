@@ -18,7 +18,9 @@ For a basis string, let $`A`$ count its middle-level occupations and let $`E`$ b
 For two strings with energy difference $`h\gt 0`$, inversion requires
 
 ```math
-\delta\,\Delta A\gt \beta h.
+\begin{aligned}
+\delta\,\Delta A&\gt \beta h.
+\end{aligned}
 \tag{1}
 ```
 

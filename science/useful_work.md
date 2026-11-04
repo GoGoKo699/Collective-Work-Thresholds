@@ -166,10 +166,12 @@ M(k)=\frac{n!}{\prod_j k_j!}.
 For integers $`k\ge1`$ and $`m`$ with $`|m|\le k/2`$, set $`t=|m|`$. Expanding the finite products for $`k!/(k-m)!`$, for both signs of $`m`$, gives
 
 ```math
+\begin{aligned}
 \left|\log\frac{k!}{(k-m)!}
        -m\log k+\frac{m^2}{2k}\right|
- \le\frac{|m|}{2k}
+ &\le\frac{|m|}{2k}
     +\frac{t(t+1)(2t+1)}{6k^2}.
+\end{aligned}
 \tag{F}
 ```
 
@@ -184,17 +186,20 @@ T_{n,p,K}=\{k:\ |k_j-np_j|\le K\sqrt n\ \text{for every }j\}.
 Suppose
 
 ```math
-\frac K{\sqrt n}\le\frac{p_*}2,
-\qquad
-\lVert m\rVert_\infty\le\frac{np_*}4.
+\begin{aligned}
+\frac K{\sqrt n}&\le\frac{p_*}2,\\
+\lVert m\rVert_\infty&\le\frac{np_*}4.
+\end{aligned}
 \tag{V}
 ```
 
 Then every $`k\in T_{n,p,K}`$ satisfies $`k_j\ge np_*/2\ge1`$ and $`|m_j|\le k_j/2`$, so $`k-m`$ is a valid nonnegative type. Applying (F), and replacing $`k_j`$ by $`np_j`$, gives
 
 ```math
+\begin{aligned}
 \log\frac{M(k-m)}{M(k)}
- \ge R-Q-\mathcal E,
+ &\ge R-Q-\mathcal E,
+\end{aligned}
 \tag{M}
 ```
 
@@ -246,11 +251,13 @@ Define the finite Fourier contraction
 **Finite lemma.** A system-only permutation unitary extracts at least
 
 ```math
-gw(1-e^{-R})
+\begin{aligned}
+&gw(1-e^{-R})
 \left[
  \frac12-\frac{d}{4K^2}
  -\frac{2w-1}{2}\lambda(p,2w)^n
 \right]_+.
+\end{aligned}
 \tag{W}
 ```
 
@@ -310,11 +317,13 @@ q_*=\min_jq_j,
 Take any fixed
 
 ```math
-C\ge\max\left\{
+\begin{aligned}
+C&\ge\max\left\{
  1,\ \frac{100g}{a},
  \left(\frac{16K\alpha U}{q_*\mu}\right)^2,
  \frac{3\log100}{\alpha v}
 \right\}.
+\end{aligned}
 \tag{C}
 ```
 

@@ -132,8 +132,10 @@ Under $`P=p_\delta^{\otimes n}`$ and $`Q=q^{\otimes n}`$, respectively,
 [Hoeffding's inequality](https://doi.org/10.1080/01621459.1963.10500830) applies under either law because the increments are independent and each has range at most $`R\delta`$. For every $`t\ge0`$:
 
 ```math
-\Pr(L-\mathbb EL\ge t),\ \Pr(L-\mathbb EL\le-t)
-\le\exp\!\left(-\frac{2t^2}{R^2s}\right).
+\begin{aligned}
+\Pr(L-\mathbb EL\ge t)&\le\exp\!\left(-\frac{2t^2}{R^2s}\right),\\
+\Pr(L-\mathbb EL\le-t)&\le\exp\!\left(-\frac{2t^2}{R^2s}\right).
+\end{aligned}
 \tag{4}
 ```
 
@@ -152,9 +154,11 @@ For $`a\gt Ms`$, tail integration gives
 The last step follows by replacing the integrand's factor one by $`u/(a-Ms)`$. The lower tail under $`Q`$ is bounded by the same exponential because $`a+\mu_Q\ge a-Ms`$. Hence (2) yields
 
 ```math
+\begin{aligned}
 D(P\Vert\sigma)
-\le\left[\frac{R^2s}{4(a-Ms)}+e^{-a}\right]
+&\le\left[\frac{R^2s}{4(a-Ms)}+e^{-a}\right]
 \exp\!\left[-\frac{2(a-Ms)^2}{R^2s}\right].
+\end{aligned}
 \tag{5}
 ```
 
