@@ -1,0 +1,26 @@
+# Collective Work Thresholds
+
+This repository studies the jointly controlled block size needed for useful mean ergotropy near a positive-temperature Gibbs state. The model is a fixed finite commensurate Hamiltonian, a known independent diagonal C2 input path, and arbitrary system-only cyclic unitaries.
+
+## Core result
+
+First activation requires Theta(delta^-1) copies; a fixed 25% thermodynamic yield requires Theta(delta^-2). A passive-reference relative-entropy inequality proves W_n <= A(1+B n delta^2) exp[-c/(n delta^2)] uniformly over all unitaries in the small-block window. Constants depend on the fixed system and path.
+
+## Read by purpose
+
+- Scientific overview and routes: README.md.
+- Definitions, quantifiers and transverse coefficient: science/model.md.
+- Normalized clipping, common observable order and all-unitary converse: science/passive_clipping.md.
+- Integer activation witness and safe exponential-work window: science/activation.md.
+- Explicit finite extraction certificate, type multiplicities, Bezout rounding, residue mixing and quarter-yield construction: science/useful_work.md.
+- Exact odd-integer qutrit onset and strict-tie counterexample: science/qutrit.md.
+- Mean work, control resources and essential hypothesis boundaries: science/interpretation.md.
+- Inherited tools, closest literature and concurrent project overlap: references/RELATED_WORK.md.
+- Structured citations: references/references.bib.
+- Cancellation-free finite qutrit rearrangement, checked cases and exactness limits: verification/README.md, verification/ergotropy_validate.py and verification/checked_cases.json.
+
+## Preserve these distinctions
+
+The theorem bounds joint block size, not gate complexity, charging time, power or reliable-work sample complexity. It excludes coherent inputs and Hamiltonians varying with the perturbation parameter. An exact first inversion can be arbitrarily close to a tie, so the matched exponential lower work estimate applies only at a fixed factor beyond onset. Degeneracies are allowed. No monotonicity of yield per copy, universal crossover constant or arbitrary near-total yield is assumed.
+
+The equal-entropy Gibbs endpoint, type-transport methods, statistical inverse-square scale and ordering-preserving passivity tools are inherited. The concurrent Quantum-Work-Activation note shares the rational-qutrit task and clipping mechanism. The quantitative addition here is the bandwidth-free converse, exact threshold, specified quarter yield and general finite commensurate C2 scope. Its irrational-spectrum branch is not a dependency of this account.
