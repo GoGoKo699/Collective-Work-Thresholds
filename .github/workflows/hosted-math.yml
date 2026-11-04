@@ -36,7 +36,8 @@ jobs:
         run: |
           NODE_PATH="$RUNNER_TEMP/hosted-deps/node_modules" node verification/hosted/capture_hosted_math.cjs \
             --root "$GITHUB_WORKSPACE" --repository "$SOURCE_REPOSITORY" \
-            --revision "$SOURCE_REVISION" --output "$RUNNER_TEMP/hosted-evidence"
+            --revision "$SOURCE_REVISION" --output "$RUNNER_TEMP/hosted-evidence" \
+            --contract verification/hosted/math-contract.json
       - name: Retain the report and captures, including failed attempts
         if: always()
         uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4

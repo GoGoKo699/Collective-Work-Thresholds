@@ -40,6 +40,14 @@ For $`H=\mathrm{diag}(0,1,2)`$ and $`p_\delta\propto(1,e^{-\beta+\delta},e^{-2\b
 
 The general theorem is a quantitative strengthening of passive-approximation and collective type-matching methods. Its comparison with the concurrent [Quantum-Work-Activation](https://github.com/GoGoKo699/Quantum-Work-Activation) investigation and with published results is stated in the [related-work account](references/RELATED_WORK.md).
 
+## Learn the result
+
+The educational anchor is **John Watrous, *The Theory of Quantum Information* (Cambridge University Press, 2018)**, available through the [author's book page](https://cs.uwaterloo.ca/~watrous/TQI/).
+
+Begin with the [Watrous-to-project bridge](learning/WATROUS_BRIDGE.md). It translates the relevant material on states, majorization, entropy, relative entropy and concentration into the work-extraction setting, then explains the additional thermodynamic and lattice arguments. A worked three-level example makes a collective population swap explicit.
+
+The [30-milestone map](learning/MILESTONES.md) organizes the complete conceptual route into background/preliminaries and narrative/innovation. Its dependencies and source pointers connect the local mechanisms to the final two-threshold theorem. The map is shared by all readers; the specialist proofs remain in the scientific pages above. Reading the entire textbook is not a prerequisite.
+
 ## Reproduce the examples
 
 From the repository root, run:

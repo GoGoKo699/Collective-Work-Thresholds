@@ -227,9 +227,11 @@ Indeed, $`|\log[k_j/(np_j)]|\le2K/(p_*\sqrt n)`$ gives the first term. The chang
 Let $`p`$ be positive, $`n\ge1`$ be an integer, $`K\ge1`$, and $`m\in\mathbb Z^d`$ satisfy (V), $`\sum_jm_j=0`$, and
 
 ```math
-w=z\cdot m\in\mathbb Z_{\gt 0},\qquad
-R=m\cdot\log p\gt 0,\qquad
-R-Q-\mathcal E\ge0.
+\begin{aligned}
+w=z\cdot m&\in\mathbb Z_{\gt 0},\\
+R=m\cdot\log p&\gt 0,\\
+R-Q-\mathcal E&\ge0.
+\end{aligned}
 \tag{S}
 ```
 

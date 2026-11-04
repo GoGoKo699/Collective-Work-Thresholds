@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 'use strict';
-// Read-only collector for the real GitHub host. See ../references/hosted-rendering.md.
+// Read-only collector for the real GitHub host. See ../README.md, Hosted mathematical rendering.
 // Importing this module has no network effects; dependencies load only in run().
 const fs = require('node:fs');
 const path = require('node:path');

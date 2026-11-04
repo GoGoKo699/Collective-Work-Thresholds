@@ -113,9 +113,11 @@ s=n\delta^2.
 Smoothness, normalization and full support provide fixed $`R,M,\delta_0\gt 0`$ such that, for every $`0\lt \delta\le\delta_0`$,
 
 ```math
-\mathrm{osc}_j\ell_\delta(j)\le R\delta,\qquad
-D(p_\delta\Vert q)\le M\delta^2,\qquad
-D(q\Vert p_\delta)\le M\delta^2.
+\begin{aligned}
+\mathrm{osc}_j\ell_\delta(j)&\le R\delta,\\
+D(p_\delta\Vert q)&\le M\delta^2,\\
+D(q\Vert p_\delta)&\le M\delta^2.
+\end{aligned}
 \tag{3}
 ```
 
