@@ -13,33 +13,33 @@ E_j=g z_j,
 \qquad z_j\in\mathbb Z_{\ge0},
 \qquad \min_j z_j=0,
 \qquad \gcd(z_1,\ldots,z_d)=1,
-\qquad g>0.
+\qquad g\gt 0.
 ```
 
-The index $`j`$ labels individual energy eigenvectors, so repeated $`z_j`$ are permitted. Fix $`\beta>0`$ and $`q_j=e^{-\beta E_j}/Z`$. Let $`p_\delta`$, $`0\le\delta<\bar\delta`$, be a $`C^2`$ probability path in this fixed basis with $`p_0=q`$. Positivity near zero follows from $`q_j>0`$.
+The index $`j`$ labels individual energy eigenvectors, so repeated $`z_j`$ are permitted. Fix $`\beta\gt 0`$ and $`q_j=e^{-\beta E_j}/Z`$. Let $`p_\delta`$, $`0\le\delta\lt \bar\delta`$, be a $`C^2`$ probability path in this fixed basis with $`p_0=q`$. Positivity near zero follows from $`q_j\gt 0`$.
 
 Define
 
 ```math
 f_j=\frac{p'_{0,j}}{q_j},\qquad
-V=\operatorname{Var}_q(E),\qquad
-c=\operatorname{Cov}_q(E,f),\qquad
+V=\mathrm{Var}_q(E),\qquad
+c=\mathrm{Cov}_q(E,f),\qquad
 u_j=q_j\left[f_j-\frac{c}{V}(E_j-\mathbb E_q E)\right],
 \qquad
-v=\sum_j\frac{u_j^2}{q_j}>0.
+v=\sum_j\frac{u_j^2}{q_j}\gt 0.
 ```
 
-The assumption $`v>0`$ is transversality to the Gibbs-temperature curve, as in the [model](model.md). Let $`q_\delta`$ be the positive-temperature Gibbs state with $`S(q_\delta)=S(p_\delta)`$, defined locally near zero. Put
+The assumption $`v\gt 0`$ is transversality to the Gibbs-temperature curve, as in the [model](model.md). Let $`q_\delta`$ be the positive-temperature Gibbs state with $`S(q_\delta)=S(p_\delta)`$, defined locally near zero. Put
 
 ```math
 w_\infty(\delta)=\sum_j E_j(p_{\delta,j}-q_{\delta,j}),
 \qquad
-a=\frac{v}{2\beta}>0.
+a=\frac{v}{2\beta}\gt 0.
 ```
 
 Here $`w_\infty`$ is the established equal-entropy Gibbs bound, and asymptotically achievable work per copy. The proof below only needs the energy difference and entropy identity, not that prior asymptotic achievability theorem.
 
-**Theorem.** There exist a finite constant $`C>0`$ and $`\delta_0>0`$, depending only on the fixed Hamiltonian, $`\beta`$, and the local path, such that for every $`0<\delta\le\delta_0`$, at the integer block size
+**Theorem.** There exist a finite constant $`C\gt 0`$ and $`\delta_0\gt 0`$, depending only on the fixed Hamiltonian, $`\beta`$, and the local path, such that for every $`0\lt \delta\le\delta_0`$, at the integer block size
 
 ```math
 n=\left\lceil\frac C{\delta^2}\right\rceil
@@ -132,7 +132,7 @@ The energy drop $`gw`$ is an exact integer multiple of $`g`$, rounded downward. 
 
 ### The individual probability ratio
 
-Let $`R=m\cdot\log p_\delta`$. Since $`\beta_\delta>0`$ locally and $`gw\le\alpha n w_\infty`$,
+Let $`R=m\cdot\log p_\delta`$. Since $`\beta_\delta\gt 0`$ locally and $`gw\le\alpha n w_\infty`$,
 
 ```math
 \begin{aligned}
@@ -173,7 +173,7 @@ For integers $`k\ge1`$ and $`m`$ with $`|m|\le k/2`$, set $`t=|m|`$. Expanding t
 \tag{F}
 ```
 
-To verify this, for $`m\ge0`$ use $`\sum_{r=0}^{m-1}\log(k-r)`$; for $`m=-t<0`$ use $`-\sum_{r=1}^t\log(k+r)`$. The linear correction is $`-m(m-1)/(2k)`$ in both cases. The inequality $`|\log(1+y)-y|\le y^2`$ for $`|y|\le1/2`$, together with $`\sum_{r=1}^t r^2=t(t+1)(2t+1)/6`$, proves (F). No Stirling error is hidden here.
+To verify this, for $`m\ge0`$ use $`\sum_{r=0}^{m-1}\log(k-r)`$; for $`m=-t\lt 0`$ use $`-\sum_{r=1}^t\log(k+r)`$. The linear correction is $`-m(m-1)/(2k)`$ in both cases. The inequality $`|\log(1+y)-y|\le y^2`$ for $`|y|\le1/2`$, together with $`\sum_{r=1}^t r^2=t(t+1)(2t+1)/6`$, proves (F). No Stirling error is hidden here.
 
 For a positive distribution $`p`$, an integer $`n\ge1`$, and $`K\ge1`$, define $`p_*=\min_jp_j`$. Let
 
@@ -227,8 +227,8 @@ Indeed, $`|\log[k_j/(np_j)]|\le2K/(p_*\sqrt n)`$ gives the first term. The chang
 Let $`p`$ be positive, $`n\ge1`$ be an integer, $`K\ge1`$, and $`m\in\mathbb Z^d`$ satisfy (V), $`\sum_jm_j=0`$, and
 
 ```math
-w=z\cdot m\in\mathbb Z_{>0},\qquad
-R=m\cdot\log p>0,\qquad
+w=z\cdot m\in\mathbb Z_{\gt 0},\qquad
+R=m\cdot\log p\gt 0,\qquad
 R-Q-\mathcal E\ge0.
 \tag{S}
 ```
@@ -238,7 +238,7 @@ Define the finite Fourier contraction
 ```math
 \lambda(p,2w)=
 \max_{1\le h\le2w-1}
-\left|\sum_jp_j\exp\!\left(\frac{2\pi i h z_j}{2w}\right)\right|<1.
+\left|\sum_jp_j\exp\!\left(\frac{2\pi i h z_j}{2w}\right)\right|\lt 1.
 ```
 
 **Finite lemma.** A system-only permutation unitary extracts at least
@@ -271,7 +271,7 @@ Summing over the $`w`$ residues $`\{w,\ldots,2w-1\}`$ shows that their total pro
 \frac12-\frac{2w-1}{2}\lambda(p,2w)^n.
 ```
 
-The strict inequality $`\lambda<1`$ needs justification. If a nontrivial Fourier sum had modulus one, positivity of every $`p_j`$ would force all its phase factors to agree. The label $`z_{j_0}=0`$ forces the common phase to equal one. Then $`2w`$ divides $`h z_j`$ for every $`j`$; the gcd assumption forces $`2w`$ to divide $`h`$, a contradiction. Duplicate energies merely repeat some phase factors and do not affect this argument.
+The strict inequality $`\lambda\lt 1`$ needs justification. If a nontrivial Fourier sum had modulus one, positivity of every $`p_j`$ would force all its phase factors to agree. The label $`z_{j_0}=0`$ forces the common phase to equal one. Then $`2w`$ divides $`h z_j`$ for every $`j`$; the gcd assumption forces $`2w`$ to divide $`h`$, a contradiction. Duplicate energies merely repeat some phase factors and do not affect this argument.
 
 Select all types that are typical and whose total integer energy lies in the upper residue half. Their total probability is at least the bracket in (W). By (M) and (S), $`M(k-m)\ge M(k)`$ for every selected type. Inject every computational-basis string of type $`k`$ into a different string of type $`k-m`$.
 
@@ -350,16 +350,16 @@ Q&\le\frac{\alpha^2Cv}{2}+\frac{\mu C}{8},\\
 Hence
 
 ```math
-R-Q-\mathcal E\ge\frac{\mu C}{2}>0,
+R-Q-\mathcal E\ge\frac{\mu C}{2}\gt 0,
 \qquad
 R\ge\frac{\alpha Cv}{3}\ge\log100.
 ```
 
-Condition (V) also holds eventually: $`K/\sqrt n\to0`$, $`p_*\to q_*>0`$, and $`\lVert m\rVert_\infty/n=O(\delta)`$. Thus all selected target types are valid, and their multiplicities dominate the source multiplicities, for every sufficiently small $`\delta`$.
+Condition (V) also holds eventually: $`K/\sqrt n\to0`$, $`p_*\to q_*\gt 0`$, and $`\lVert m\rVert_\infty/n=O(\delta)`$. Thus all selected target types are valid, and their multiplicities dominate the source multiplicities, for every sufficiently small $`\delta`$.
 
 ### Positive work drop and a finite set of possible moduli
 
-Shrink the permitted $`\delta`$-interval so that $`0<\delta\le1`$ and
+Shrink the permitted $`\delta`$-interval so that $`0\lt \delta\le1`$ and
 
 ```math
 \frac a2\le\frac{w_\infty(\delta)}{\delta^2}\le2a.
@@ -379,7 +379,7 @@ w\ge1,
 \frac{gw}{n w_\infty}
  \ge\alpha-\frac{g}{n w_\infty}
  \ge\alpha-\frac{2g}{aC}
- \ge0.73>0.7.
+ \ge0.73\gt 0.7.
 ```
 
 Moreover $`w\le W_0`$, where the fixed integer
@@ -398,9 +398,9 @@ Define
 \lambda_*=
 \max_{1\le w\le W_0}
 \max_{1\le h\le2w-1}
-\left|\sum_jq_j e^{2\pi i h z_j/(2w)}\right|<1,
+\left|\sum_jq_j e^{2\pi i h z_j/(2w)}\right|\lt 1,
 \qquad
-\lambda=\frac{1+\lambda_*}{2}<1.
+\lambda=\frac{1+\lambda_*}{2}\lt 1.
 ```
 
 There are finitely many modes, and their strict contractions were proved in Section 5. If
@@ -431,12 +431,12 @@ Using $`gw/(n w_\infty)\ge0.7`$, $`1-e^{-R}\ge0.99`$, and (W), the extracted fra
 ```math
 \frac7{10}\frac{99}{100}\frac{39}{80}
  =\frac{27027}{80000}
- =0.3378375>\frac14.
+ =0.3378375\gt \frac14.
 ```
 
 This proves the theorem with slack in the numerical fraction.
 
 ### A precise choice rule for $`\delta_0`$
 
-Choose any $`\delta_0>0`$ small enough that, for every $`0<\delta\le\delta_0`$: the equal-entropy Gibbs state exists with $`\beta_\delta>0`$; the two-sided $`w_\infty/\delta^2`$ bound holds; (V) and (A) hold; $`\lVert p_\delta-q\rVert_1\le(1-\lambda_*)/2`$; and $`\delta\le\min\{1,\sqrt{C/n_{\mathrm{mix}}}\}`$. Each is a stated finite inequality and was shown above to hold throughout a sufficiently small interval. Their finite intersection therefore supplies such a $`\delta_0`$. No condition assumes the desired work bound, no limit interchanges $`C`$ with $`\delta`$, and no continuity of $`m`$ or $`w`$ is used.
+Choose any $`\delta_0\gt 0`$ small enough that, for every $`0\lt \delta\le\delta_0`$: the equal-entropy Gibbs state exists with $`\beta_\delta\gt 0`$; the two-sided $`w_\infty/\delta^2`$ bound holds; (V) and (A) hold; $`\lVert p_\delta-q\rVert_1\le(1-\lambda_*)/2`$; and $`\delta\le\min\{1,\sqrt{C/n_{\mathrm{mix}}}\}`$. Each is a stated finite inequality and was shown above to hold throughout a sufficiently small interval. Their finite intersection therefore supplies such a $`\delta_0`$. No condition assumes the desired work bound, no limit interchanges $`C`$ with $`\delta`$, and no continuity of $`m`$ or $`w`$ is used.
 

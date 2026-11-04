@@ -3,9 +3,9 @@
 This directory checks the harmonic **middle-level tilt** used in the [qutrit example](../science/qutrit.md):
 
 ```math
-H=\operatorname{diag}(0,1,2),\qquad
+H=\mathrm{diag}(0,1,2),\qquad
 p_j=Z^{-1}\exp[-\beta j+\delta\mathbf1_{j=1}],
-\qquad \beta>0,\quad 0\le\delta<\beta.
+\qquad \beta\gt 0,\quad 0\le\delta\lt \beta.
 ```
 
 Work is the maximum mean system-energy decrease under an arbitrary unitary on
@@ -61,7 +61,7 @@ for $`\delta=0`$. For example, $`\beta=1,\delta=1/11`$ first activates at
 
 ## Work without subtracting two large energies
 
-Let the distinct per-microstate probabilities be $`p_1>\cdots>p_G`$.
+Let the distinct per-microstate probabilities be $`p_1\gt \cdots\gt p_G`$.
 For all groups through group $`i`$, let $`D_i`$ be their original total
 energy minus the energy of the same number of lowest-energy basis states.
 Both quantities include the exact multiplicities. Every $`D_i`$ is a

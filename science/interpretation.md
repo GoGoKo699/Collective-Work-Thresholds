@@ -29,7 +29,7 @@ A unitary on a block can be difficult to synthesize even when its existence is e
 
 ## 3. Diagonality is essential
 
-Let $`H=\operatorname{diag}(0,1)`$, let $`q`$ be its positive-temperature Gibbs state, and let $`\rho_\delta=U_\delta qU_\delta^\dagger`$ with a real rotation by angle $`\delta`$. Its entropy equals that of $`q`$, and
+Let $`H=\mathrm{diag}(0,1)`$, let $`q`$ be its positive-temperature Gibbs state, and let $`\rho_\delta=U_\delta qU_\delta^\dagger`$ with a real rotation by angle $`\delta`$. Its entropy equals that of $`q`$, and
 
 ```math
 W_1(\rho_\delta)=w_\infty(\delta)
@@ -45,7 +45,7 @@ $`p_\delta\propto e^{-\beta H+\delta^2 A}`$ has $`v=0`$ at the origin. Applying 
 
 ## 5. Fixed temperature and fixed energy lattice
 
-At $`\beta=0`$, the local entropy inverse used in the model is singular and the clipping interval is empty. For $`H=\operatorname{diag}(0,1,2)`$ and
+At $`\beta=0`$, the local entropy inverse used in the model is singular and the clipping interval is empty. For $`H=\mathrm{diag}(0,1,2)`$ and
 $`p_\delta=(1/3-\delta,1/3+2\delta,1/3-\delta)`$, one copy already yields $`3\delta`$ of work. The theorem is explicitly at fixed positive inverse temperature.
 
 For a fixed commensurate Hamiltonian, all product energies retain the same lower gap bound $`g`$. An incommensurate spectrum can have increasingly small many-copy differences, so the proof does not extend by replacing a rational energy ratio with a nearby irrational one. A Hamiltonian varying with $`\delta`$ can likewise invalidate uniform constants. Arithmetic dependence is the related subject of [Quantum-Work-Activation](https://github.com/GoGoKo699/Quantum-Work-Activation); its irrational-spectrum conclusions are not required or established here.

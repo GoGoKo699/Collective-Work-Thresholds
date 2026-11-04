@@ -6,10 +6,10 @@ The operational definitions and fixed-system assumptions are in the [model](mode
 
 ## 1. A finite passive-reference lemma
 
-Let $`H=\operatorname{diag}(E_i)`$ be finite, and suppose every nonzero energy separation has magnitude at least $`g>0`$. Let $`q_i=e^{-\beta E_i}/Z`$, $`\beta>0`$, and let $`p_i>0`$ be any probability distribution in the same basis. For
+Let $`H=\mathrm{diag}(E_i)`$ be finite, and suppose every nonzero energy separation has magnitude at least $`g\gt 0`$. Let $`q_i=e^{-\beta E_i}/Z`$, $`\beta\gt 0`$, and let $`p_i\gt 0`$ be any probability distribution in the same basis. For
 
 ```math
-0<a<\frac{\beta g}{2},\qquad
+0\lt a\lt \frac{\beta g}{2},\qquad
 L_i=\log(p_i/q_i),\qquad
 F_i=\max\{-a,\min\{L_i,a\}\},
 ```
@@ -22,7 +22,7 @@ define the **normalized** clipped reference
 Z_c=\sum_iq_i e^{F_i},
 \qquad
 K=-\log\sigma,\qquad
-\kappa=\beta-\frac{2a}{g}>0.
+\kappa=\beta-\frac{2a}{g}\gt 0.
 ```
 
 Then
@@ -38,11 +38,11 @@ The dimension and maximum energy do not appear in this bound.
 
 ### Common spectral order
 
-For $`E_j>E_i`$,
+For $`E_j\gt E_i`$,
 
 ```math
 K_j-K_i=\beta(E_j-E_i)-(F_j-F_i)
-\ge\beta(E_j-E_i)-2a>0.
+\ge\beta(E_j-E_i)-2a\gt 0.
 ```
 
 Thus $`K`$ orders different energy shells in the same way as $`H`$. The diagonal observable $`B=K-\kappa H`$ also has that order, because
@@ -77,12 +77,12 @@ The normalized reference obeys
 \boxed{\quad
 D(p\Vert\sigma)
 \le \mathbb E_p[(L-a)_+]
- +e^{-a}\Pr_q(L<-a).
+ +e^{-a}\Pr_q(L\lt -a).
 \quad}
 \tag{2}
 ```
 
-For completeness, write $`U=\{L>a\}`$ and $`D_-=\{L<-a\}`$. Since $`\sum_iq_ie^{L_i}=1`$,
+For completeness, write $`U=\{L\gt a\}`$ and $`D_-=\{L\lt -a\}`$. Since $`\sum_iq_ie^{L_i}=1`$,
 
 ```math
 Z_c-1=e^a q(U)-p(U)+e^{-a}q(D_-)-p(D_-).
@@ -110,10 +110,10 @@ L=\sum_{i=1}^n\ell_\delta(X_i),\qquad
 s=n\delta^2.
 ```
 
-Smoothness, normalization and full support provide fixed $`R,M,\delta_0>0`$ such that, for every $`0<\delta\le\delta_0`$,
+Smoothness, normalization and full support provide fixed $`R,M,\delta_0\gt 0`$ such that, for every $`0\lt \delta\le\delta_0`$,
 
 ```math
-\operatorname{osc}_j\ell_\delta(j)\le R\delta,\qquad
+\mathrm{osc}_j\ell_\delta(j)\le R\delta,\qquad
 D(p_\delta\Vert q)\le M\delta^2,\qquad
 D(q\Vert p_\delta)\le M\delta^2.
 \tag{3}
@@ -135,12 +135,12 @@ Under $`P=p_\delta^{\otimes n}`$ and $`Q=q^{\otimes n}`$, respectively,
 \tag{4}
 ```
 
-For $`a>Ms`$, tail integration gives
+For $`a\gt Ms`$, tail integration gives
 
 ```math
 \begin{aligned}
 \mathbb E_P[(L-a)_+]
-&=\int_0^\infty\Pr_P(L>a+t)\,dt\\
+&=\int_0^\infty\Pr_P(L\gt a+t)\,dt\\
 &\le\int_{a-Ms}^\infty e^{-2u^2/(R^2s)}\,du\\
 &\le\frac{R^2s}{4(a-Ms)}
  \exp\!\left[-\frac{2(a-Ms)^2}{R^2s}\right].
@@ -193,7 +193,7 @@ $`n w_\infty(\delta)\ge(v/(4\beta))s`$. Thus
 \longrightarrow0\quad(s\to0).
 ```
 
-For every fixed $`f>0`$, one can choose a fixed $`s_f>0`$ so that **all** sufficiently small $`\delta`$ and **all** integers with $`n\delta^2\le s_f`$ fail to recover fraction $`f`$. This proves $`N_f(\delta)=\Omega(\delta^{-2})`$ without assuming a monotone yield curve.
+For every fixed $`f\gt 0`$, one can choose a fixed $`s_f\gt 0`$ so that **all** sufficiently small $`\delta`$ and **all** integers with $`n\delta^2\le s_f`$ fail to recover fraction $`f`$. This proves $`N_f(\delta)=\Omega(\delta^{-2})`$ without assuming a monotone yield curve.
 
 ## 5. Why the energy-bandwidth factor matters
 

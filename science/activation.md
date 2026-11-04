@@ -4,7 +4,7 @@ The [useful-work threshold](model.md#4-exact-threshold-theorem) asks for a fixed
 
 ## 1. A passive lower window
 
-For two product basis strings $`x,y`$ with $`E(x)>E(y)`$, the fixed lattice gives $`E(x)-E(y)\ge g`$. The one-copy likelihood range in [equation (3)](passive_clipping.md#3-product-likelihoods-near-equilibrium) therefore implies
+For two product basis strings $`x,y`$ with $`E(x)\gt E(y)`$, the fixed lattice gives $`E(x)-E(y)\ge g`$. The one-copy likelihood range in [equation (3)](passive_clipping.md#3-product-likelihoods-near-equilibrium) therefore implies
 
 ```math
 \log\frac{P_\delta(x)}{P_\delta(y)}
@@ -16,11 +16,11 @@ If $`nR\delta\le\beta g`$, there is no strict population inversion across distin
 
 ## 2. An integer witness for activation
 
-Let $`z`$ be the normalized integer energy labels and $`f`$ the score from the [model](model.md). Since $`v>0`$, the vector $`f`$ is not in the real span of $`\mathbf1,z`$. The nullspace of an integer matrix is spanned by rational vectors. After clearing denominators and choosing a sign, there is a fixed $`r\in\mathbb Z^d`$ such that
+Let $`z`$ be the normalized integer energy labels and $`f`$ the score from the [model](model.md). Since $`v\gt 0`$, the vector $`f`$ is not in the real span of $`\mathbf1,z`$. The nullspace of an integer matrix is spanned by rational vectors. After clearing denominators and choosing a sign, there is a fixed $`r\in\mathbb Z^d`$ such that
 
 ```math
 \mathbf1\cdot r=z\cdot r=0,\qquad
-h=f\cdot r>0.
+h=f\cdot r\gt 0.
 ```
 
 The gcd condition and a zero energy label also give a fixed Bezout vector $`t\in\mathbb Z^d`$ with
@@ -43,7 +43,7 @@ $`\log p_\delta=\log q+\delta f+O(\delta^2)`$ gives
 ```math
 \Gamma_\delta=m_\delta\cdot\log p_\delta
 =-\beta g+\delta L_\delta h+O(\delta)
-=\beta g+O(\delta)>0.
+=\beta g+O(\delta)\gt 0.
 ```
 
 The remainder is controlled because $`\|m_\delta\|_1=O(\delta^{-1})`$. The positive and negative parts of $`m_\delta`$ are valid types of equal length
@@ -69,7 +69,7 @@ The constructed block satisfies
 C_{\mathrm{act}}:=\frac{\beta g\|r\|_1}{h}.
 ```
 
-For any integer sequence with $`n(\delta)\delta\to C>C_{\mathrm{act}}`$, pad both witness strings with the same labels to length $`n(\delta)`$. Their energy gap and probability-ratio margin remain unchanged. Positivity gives a fixed bound $`p_{\delta,j}\ge q_{\min}/2`$, so the witness probability is at least $`(q_{\min}/2)^n`$. This proves an exponential lower bound. The uniform converse, with $`n\delta^2\sim C\delta`$, supplies the matching exponential upper order:
+For any integer sequence with $`n(\delta)\delta\to C\gt C_{\mathrm{act}}`$, pad both witness strings with the same labels to length $`n(\delta)`$. Their energy gap and probability-ratio margin remain unchanged. Positivity gives a fixed bound $`p_{\delta,j}\ge q_{\min}/2`$, so the witness probability is at least $`(q_{\min}/2)^n`$. This proves an exponential lower bound. The uniform converse, with $`n\delta^2\sim C\delta`$, supplies the matching exponential upper order:
 
 ```math
 e^{-C_1/\delta}\le W_{n(\delta)}(\delta)
