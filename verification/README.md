@@ -3,9 +3,9 @@
 This directory checks the harmonic **middle-level tilt** used in the [qutrit example](../science/qutrit.md):
 
 ```math
-H=\operatorname{diag}(0,1,2),\qquad
+H=\mathrm{diag}(0,1,2),\qquad
 p_j=Z^{-1}\exp[-\beta j+\delta\mathbf1_{j=1}],
-\qquad \beta>0,\quad 0\le\delta<\beta.
+\qquad \beta\gt 0,\quad 0\le\delta\lt \beta.
 ```
 
 Work is the maximum mean system-energy decrease under an arbitrary unitary on
@@ -61,7 +61,7 @@ for $`\delta=0`$. For example, $`\beta=1,\delta=1/11`$ first activates at
 
 ## Work without subtracting two large energies
 
-Let the distinct per-microstate probabilities be $`p_1>\cdots>p_G`$.
+Let the distinct per-microstate probabilities be $`p_1\gt \cdots\gt p_G`$.
 For all groups through group $`i`$, let $`D_i`$ be their original total
 energy minus the energy of the same number of lowest-energy basis states.
 Both quantities include the exact multiplicities. Every $`D_i`$ is a
@@ -145,3 +145,14 @@ These checks address ordering, multiplicity transport, cancellation, the
 endpoint calculation, and strict activation boundaries. They are finite
 numerical evidence, not a replacement for the analytic converse or
 achievability proof.
+
+
+## Hosted mathematical rendering
+
+The [read-only GitHub workflow](../.github/workflows/hosted-math.yml) checks the actual commit-pinned GitHub pages. Its [capture script](hosted/capture_hosted_math.cjs) and [source checker](hosted/check_rendered_math.py) inventory every tracked Markdown page, compile reference MathML, and compare all rendered inline and display expressions at viewport widths 1440 and 760 pixels. The dependencies are Playwright 1.56.1 and MathJax 3.2.1, with Node.js 18+ and Python 3.10+.
+
+The job retains the source inventory, HTML, screenshots, structural comparisons and `hosted-report.json` as a short-lived Actions artifact, including failed attempts. It needs only repository read permission and uses a fresh anonymous browser. A run on a different commit is a separate observation; a successful source-only check is not a hosted rendering result.
+
+The comparison checks expression coverage, symbols, structural slots, source hashes and display geometry. The [text contracts](hosted/math-contract.json) additionally protect headline formulas and expressions previously affected by renderer defects. A passing automated report still requires visual inspection of important formulas, tables and navigation against the same source. It establishes neither scientific correctness nor a guarantee about future GitHub rendering. Local execution requires an environment that can validate the GitHub HTTPS connection; certificate checks must remain enabled.
+
+For a local capture, install the pinned packages in a temporary dependency directory, install Chromium through Playwright, and run the collector with `--root`, `--repository`, `--revision` (the full commit SHA), `--output` (a new empty evidence directory), and `--contract verification/hosted/math-contract.json`. Optional repeated `--page` arguments restrict diagnostic samples and need a correspondingly restricted contract; final review should cover the complete reader-facing scope. The workflow pins Ubuntu 24.04 for compatibility with these browser dependencies.

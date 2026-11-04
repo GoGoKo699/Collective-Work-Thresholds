@@ -1,0 +1,74 @@
+{
+  "schema_version": 1,
+  "expressions": [
+    {
+      "path": "README.md",
+      "index": 10,
+      "source_sha256": "56f865b6e6a8b7e7d8b02c03d94cdef33ab02823d9266959ab03939dfb7a4d58",
+      "expected_text": "Wn(δ)≤A(1+Bs)exp(−c0/s),0<s≤s0."
+    },
+    {
+      "path": "science/passive_clipping.md",
+      "index": 39,
+      "source_sha256": "20a0c718ffe7a3f12fc140e914abbcfedbc2fa708caa4428a0bc9d2a6432380b",
+      "required_text": [
+        "oscjℓδ(j)≤Rδ",
+        "D(pδ‖q)≤Mδ2",
+        "D(q‖pδ)≤Mδ2",
+        "(3)"
+      ]
+    },
+    {
+      "path": "science/useful_work.md",
+      "index": 113,
+      "source_sha256": "6eaaad71144fa4594e020915a1be74c47b6ab7879e2dc010c3d3353f33ae56fb",
+      "required_text": [
+        "w=z⋅m∈Z>0",
+        "R=m⋅logp>0",
+        "R−Q−E≥0",
+        "(S)"
+      ]
+    },
+    {
+      "path": "science/qutrit.md",
+      "index": 1,
+      "source_sha256": "f6d9faae4cf628a4c407055047d4233b5d44a9de5a3ded5a195492b2e7b8979e",
+      "required_text": [
+        "H=diag(0,1,2)",
+        "0<δ<β"
+      ]
+    },
+    {
+      "path": "science/qutrit.md",
+      "index": 23,
+      "source_sha256": "72871a923a190485749bf41b8c211d0bbc91233d0bb0c8035f3db56992c0c65e",
+      "required_text": [
+        "Nact(δ)",
+        "m>β/δ"
+      ]
+    },
+    {
+      "path": "learning/WATROUS_BRIDGE.md",
+      "index": 38,
+      "source_sha256": "d5b96ea3ccafbb884c1d61370dd7b94d98a0b11846a07d906cb01911033945d5",
+      "required_text": [
+        "Wswap=",
+        "0.016384"
+      ]
+    },
+    {
+      "path": "learning/WATROUS_BRIDGE.md",
+      "index": 200,
+      "source_sha256": "251273b16d149da83df099a011548d11f9451fb4aa67c397906b6957046195d6",
+      "required_text": [
+        "0.3378375>14"
+      ]
+    },
+    {
+      "path": "learning/WATROUS_BRIDGE.md",
+      "index": 206,
+      "source_sha256": "9f86569b112c8687d050740fa33171bf5aa3c64661b4921e2881602a7a202ab8",
+      "expected_text": "Nact(δ)=Θ(δ−1),N1/4(δ)=Θ(δ−2)."
+    }
+  ]
+}

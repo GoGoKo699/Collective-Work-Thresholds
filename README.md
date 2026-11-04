@@ -6,7 +6,7 @@ Let $`p_\delta`$ be a smooth diagonal perturbation of a positive-temperature Gib
 
 | Quantity | Proven behavior as the state perturbation tends to zero |
 |---|---|
-| Available work per copy | $`w_\infty(\delta)=\frac{v}{2\beta}\delta^2+o(\delta^2)`$, with $`v>0`$ |
+| Available work per copy | $`w_\infty(\delta)=\frac{v}{2\beta}\delta^2+o(\delta^2)`$, with $`v\gt 0`$ |
 | First block with positive work | $`N_{\mathrm{act}}(\delta)=\Theta(\delta^{-1})`$ |
 | First block recovering at least 25% of the available mean work | $`N_{1/4}(\delta)=\Theta(\delta^{-2})`$ |
 
@@ -14,7 +14,7 @@ For all sufficiently small positive perturbations, the central converse holds fo
 
 ```math
 W_n(\delta)\le A(1+Bs)\exp(-c_0/s),
-\qquad 0<s\le s_0.
+\qquad 0\lt s\le s_0.
 ```
 
 The constants depend on the fixed Hamiltonian, temperature and probability path, but not on the block size. Consequently every sequence with $`n\delta^2\to0`$ recovers a vanishing fraction of the thermodynamic work. The proof converts a clipped passive reference into an energy bound through relative entropy, avoiding an extensive energy-bandwidth factor.
@@ -36,9 +36,17 @@ Start with the [model, exact theorem and thermodynamic normalization](science/mo
 
 The proof allows repeated energies and arbitrary fixed finite commensurate spectra. It concerns mean work from known independent inputs under unrestricted global control. Gate complexity, operation time and reliable-work fluctuations are separate resources. The diagonal, fixed-spectrum and positive-temperature assumptions are essential.
 
-For $`H=\operatorname{diag}(0,1,2)`$ and $`p_\delta\propto(1,e^{-\beta+\delta},e^{-2\beta})`$, first activation occurs at the **smallest odd integer strictly greater than** $`\beta/\delta`$. Equality is a population tie and produces no work.
+For $`H=\mathrm{diag}(0,1,2)`$ and $`p_\delta\propto(1,e^{-\beta+\delta},e^{-2\beta})`$, first activation occurs at the **smallest odd integer strictly greater than** $`\beta/\delta`$. Equality is a population tie and produces no work.
 
 The general theorem is a quantitative strengthening of passive-approximation and collective type-matching methods. Its comparison with the concurrent [Quantum-Work-Activation](https://github.com/GoGoKo699/Quantum-Work-Activation) investigation and with published results is stated in the [related-work account](references/RELATED_WORK.md).
+
+## Learn the result
+
+The educational anchor is **John Watrous, *The Theory of Quantum Information* (Cambridge University Press, 2018)**, available through the [author's book page](https://cs.uwaterloo.ca/~watrous/TQI/).
+
+Begin with the [Watrous-to-project bridge](learning/WATROUS_BRIDGE.md). It translates the relevant material on states, majorization, entropy, relative entropy and concentration into the work-extraction setting, then explains the additional thermodynamic and lattice arguments. A worked three-level example makes a collective population swap explicit.
+
+The [30-milestone map](learning/MILESTONES.md) organizes the complete conceptual route into background/preliminaries and narrative/innovation. Its dependencies and source pointers connect the local mechanisms to the final two-threshold theorem. The map is shared by all readers; the specialist proofs remain in the scientific pages above. Reading the entire textbook is not a prerequisite.
 
 ## Reproduce the examples
 

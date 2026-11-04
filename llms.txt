@@ -1,6 +1,6 @@
 # Collective Work Thresholds
 
-This repository studies the jointly controlled block size needed for useful mean ergotropy near a positive-temperature Gibbs state. The model is a fixed finite commensurate Hamiltonian, a known independent diagonal C2 input path, and arbitrary system-only cyclic unitaries.
+This repository studies the jointly controlled block size needed for useful mean ergotropy near a positive-temperature Gibbs state. The model is a fixed finite nonconstant commensurate Hamiltonian, a known positive diagonal C2 input path through the Gibbs state with a nonzero first-order component transverse to the Gibbs-temperature direction, independent copies, and arbitrary system-only cyclic unitaries.
 
 ## Core result
 
@@ -9,6 +9,8 @@ First activation requires Theta(delta^-1) copies; a fixed 25% thermodynamic yiel
 ## Read by purpose
 
 - Scientific overview and routes: README.md.
+- Single educational anchor and notation/assumption bridge: learning/WATROUS_BRIDGE.md, using John Watrous, The Theory of Quantum Information (2018).
+- Common understanding map, exactly M01 through M30 in two project-defined phases: learning/MILESTONES.md.
 - Definitions, quantifiers and transverse coefficient: science/model.md.
 - Normalized clipping, common observable order and all-unitary converse: science/passive_clipping.md.
 - Integer activation witness and safe exponential-work window: science/activation.md.
@@ -18,6 +20,12 @@ First activation requires Theta(delta^-1) copies; a fixed 25% thermodynamic yiel
 - Inherited tools, closest literature and concurrent project overlap: references/RELATED_WORK.md.
 - Structured citations: references/references.bib.
 - Cancellation-free finite qutrit rearrangement, checked cases and exactness limits: verification/README.md, verification/ergotropy_validate.py and verification/checked_cases.json.
+
+## Connected routes
+
+For the physical story, read README.md, the qutrit swap in learning/WATROUS_BRIDGE.md, science/model.md and science/interpretation.md. For a structured study route, start with learning/WATROUS_BRIDGE.md and follow the dependencies in learning/MILESTONES.md into the authoritative scientific pages. Watrous is the sole educational anchor; the research bibliography supplies attribution, not an additional prerequisite curriculum.
+
+For theorem verification, read science/model.md, science/passive_clipping.md, science/activation.md and science/useful_work.md, then check the boundaries in science/interpretation.md and references/RELATED_WORK.md. For numerical reproduction, use verification/README.md and its documented commands; numerical examples do not prove the general threshold.
 
 ## Preserve these distinctions
 
