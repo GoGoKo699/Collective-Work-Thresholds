@@ -145,3 +145,14 @@ These checks address ordering, multiplicity transport, cancellation, the
 endpoint calculation, and strict activation boundaries. They are finite
 numerical evidence, not a replacement for the analytic converse or
 achievability proof.
+
+
+## Hosted mathematical rendering
+
+The [read-only GitHub workflow](../.github/workflows/hosted-math.yml) checks the actual commit-pinned GitHub pages. Its [capture script](hosted/capture_hosted_math.cjs) and [source checker](hosted/check_rendered_math.py) inventory every tracked Markdown page, compile reference MathML, and compare all rendered inline and display expressions at viewport widths 1440 and 760 pixels. The dependencies are Playwright 1.56.1 and MathJax 3.2.1, with Node.js 18+ and Python 3.10+.
+
+The job retains the source inventory, HTML, screenshots, structural comparisons and `hosted-report.json` as a short-lived Actions artifact, including failed attempts. It needs only repository read permission and uses a fresh anonymous browser. A run on a different commit is a separate observation; a successful source-only check is not a hosted rendering result.
+
+The comparison checks expression coverage, symbols, structural slots, source hashes and display geometry. A passing automated report still requires visual inspection of important formulas, tables and navigation against the same source. It establishes neither scientific correctness nor a guarantee about future GitHub rendering. Local execution requires an environment that can validate the GitHub HTTPS connection; certificate checks must remain enabled.
+
+For a local capture, install the pinned packages in a temporary dependency directory, install Chromium through Playwright, and run the collector with `--root`, `--repository`, `--revision` (the full commit SHA) and `--output` (a new empty evidence directory). Optional repeated `--page` arguments restrict diagnostic samples; final review should cover the complete reader-facing scope.

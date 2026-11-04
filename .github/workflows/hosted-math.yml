@@ -1,0 +1,47 @@
+name: Hosted mathematical rendering
+
+on:
+  push:
+    paths:
+      - '**.md'
+      - '**.markdown'
+      - 'verification/hosted/**'
+      - '.github/workflows/hosted-math.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  compare-rendered-math:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - name: Check out the exact pushed revision
+        uses: actions/checkout@fbc6f3992d24b796d5a048ff273f7fcc4a7b6c09 # v5
+        with:
+          persist-credentials: false
+      - name: Set up Node.js
+        uses: actions/setup-node@a0853c24544627f65ddf259abe73b1d18a591444 # v5
+        with:
+          node-version: '22'
+      - name: Install the pinned comparison dependencies
+        run: |
+          npm install --prefix "$RUNNER_TEMP/hosted-deps" --no-audit --no-fund playwright@1.56.1 mathjax-full@3.2.1
+          "$RUNNER_TEMP/hosted-deps/node_modules/.bin/playwright" install --with-deps chromium
+      - name: Compare the actual GitHub pages with the pinned source
+        env:
+          SOURCE_REVISION: ${{ github.sha }}
+          SOURCE_REPOSITORY: ${{ github.repository }}
+        run: |
+          NODE_PATH="$RUNNER_TEMP/hosted-deps/node_modules" node verification/hosted/capture_hosted_math.cjs \
+            --root "$GITHUB_WORKSPACE" --repository "$SOURCE_REPOSITORY" \
+            --revision "$SOURCE_REVISION" --output "$RUNNER_TEMP/hosted-evidence"
+      - name: Retain the report and captures, including failed attempts
+        if: always()
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4
+        with:
+          name: hosted-math-${{ github.sha }}
+          path: ${{ runner.temp }}/hosted-evidence
+          if-no-files-found: error
+          retention-days: 7
