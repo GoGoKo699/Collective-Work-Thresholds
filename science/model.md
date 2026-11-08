@@ -7,11 +7,10 @@ The question is how large a jointly controlled block must be to recover a fixed 
 Let a fixed finite Hamiltonian have a nonconstant commensurate spectrum. After an irrelevant constant energy shift, write
 
 ```math
-H=\sum_{j=1}^d E_j|j\rangle\langle j|,
-\qquad E_j=gz_j,\qquad
-z_j\in\mathbb Z_{\ge0},\qquad
-\min_jz_j=0,\qquad \gcd(z_1,\ldots,z_d)=1,
-\qquad g\gt 0.
+\begin{aligned}
+H&=\sum_{j=1}^d E_j|j\rangle\langle j|,\qquad E_j=gz_j,\qquad g\gt0,\\
+z_j&\in\mathbb Z_{\ge0},\qquad \min_jz_j=0,\qquad \gcd(z_1,\ldots,z_d)=1.
+\end{aligned}
 ```
 
 The index labels individual basis states, so distinct indices can have the same energy. The Hamiltonian, dimension and lattice spacing are fixed while the perturbation tends to zero.
