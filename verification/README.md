@@ -1,6 +1,6 @@
 # Finite-block ergotropy: focused numerical reproduction
 
-This directory checks the harmonic **middle-level tilt** used in the [qutrit example](../science/qutrit.md):
+The original `ergotropy_validate.py` module checks the harmonic **middle-level tilt** used in the [qutrit example](../science/qutrit.md):
 
 ```math
 H=\mathrm{diag}(0,1,2),\qquad
@@ -11,8 +11,9 @@ p_j=Z^{-1}\exp[-\beta j+\delta\mathbf1_{j=1}],
 Work is the maximum mean system-energy decrease under an arbitrary unitary on
 the supplied block. The code computes this finite-dimensional spectral
 rearrangement. It does not model a bath, catalyst, efficient circuit, control
-cost, fluctuations, or postselection. It does not cover general spectra or
-other perturbation directions, and it does not certify the asymptotic theorem.
+cost, fluctuations, or postselection. That module does not cover general spectra or
+other perturbation directions. The separate matched-detuning check below uses
+the top-level tilt. Neither calculation certifies the asymptotic theorem.
 
 ## Files and commands
 
@@ -146,6 +147,18 @@ endpoint calculation, and strict activation boundaries. They are finite
 numerical evidence, not a replacement for the analytic converse or
 achievability proof.
 
+
+## Matched top-level tilt and entropy comparison
+
+The separate [comparison module](verify_comparison.py) checks the top-level-tilted qutrit in the [matched-detuning account](../science/qutrit_transfer.md). From the repository root, with Python 3.10+ and its standard library, run:
+
+```bash
+python3 verification/verify_comparison.py --output verification/comparison_results.json
+```
+
+It enumerates all microstates for $`n\le8`$, uses exact rational keys for energy and probability ordering, and uses 80-digit Decimal arithmetic for probabilities and the actual equal-entropy Gibbs benchmark. The committed [results](comparison_results.json) contain 18 entropy-sandwich checks, 12 normalization calculations and 18 two-copy formula comparisons. The sandwich cases include positive harmonic work, so they test both energy objectives beyond a zero-work case.
+
+The two-copy checks retain the inherited order-$`\delta`$ example and evaluate the distinct order-$`\delta^{3/2}`$ path. Each fraction uses the actual detuned Hamiltonian's own equal-entropy benchmark. The calculations check finite consistency, not interval-certified error bounds, the asymptotic exponent or a full crossover law. The [entropy proof](../science/qutrit_transfer.md#3-an-entropy-comparison-for-the-actual-matched-state) covers every block size and arbitrary global unitaries.
 
 ## Hosted mathematical rendering
 

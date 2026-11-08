@@ -2,7 +2,7 @@
 
 How many nearly thermal systems must be controlled together before their extractable work becomes useful? This map connects the state of one system to the distinction between a first population inversion and a fixed fraction of the available mean work.
 
-The allocation is **12 background/preliminaries milestones and 18 narrative/innovation milestones**. The background must join five kinds of information: quantum states and allowed operations, spectral ordering, entropy, concentration, and integer occupation counts. The longer narrative then needs both sides of the result: a bound on every unitary and a concrete permutation that attains a useful fraction. It also needs the smaller activation threshold and the assumptions that separate this task from other work-extraction problems. This is why the proof mechanisms receive more space than the foundations.
+The allocation is **12 background/preliminaries milestones and 18 narrative/innovation milestones**. The background must join five kinds of information: quantum states and allowed operations, spectral ordering, entropy, concentration, and integer occupation counts. The longer narrative then needs both sides of the result: a bound on every unitary and a concrete permutation that attains a useful fraction. It also needs the smaller activation threshold, the entropy comparison for the specified matched detuning, and the assumptions that separate this task from other work-extraction problems. This is why the proof mechanisms receive more space than the foundations.
 
 Each phase proceeds from local objects to their global use. The background ends by assembling the operational question; the narrative ends by integrating the two thresholds, their proofs, resources, and limits. These are common understanding targets. The canonical science pages retain the full calculations and specialist details.
 
@@ -86,13 +86,13 @@ The sole educational anchor is **John Watrous, *The Theory of Quantum Informatio
 
 **Central question.** How can a logarithmic comparison of states constrain energy?
 
-**Understanding target.** Interpret $`D(p\Vert q)=\sum_jp_j\ln(p_j/q_j)`$ and its nonnegativity, asymmetry, and product additivity. Explain how a Gibbs reference converts positivity into an energy bound at fixed entropy. Keep the project's natural logarithms consistent with the book's base-two convention.
+**Understanding target.** Interpret $`D(p\Vert q)=\sum_jp_j\ln(p_j/q_j)`$ and its nonnegativity, asymmetry, and product additivity. Explain how a Gibbs reference converts positivity into an energy bound at fixed entropy. Keep the project's natural logarithms consistent with the book's base-two convention, and recognize how data processing and binary Pinsker control an occupation change.
 
 **Dependencies and story role.** M01, M02, M06. This supplies the information quantity used in both normalization and the converse.
 
 **Conceptual connection.** Relative entropy is an average log-likelihood; when the reference is Gibbs, its logarithm contains the Hamiltonian.
 
-**Source pointers.** Watrous §5.2; [entropy and logarithm conventions](WATROUS_BRIDGE.md#entropy-and-the-available-work); [Gibbs relative-entropy identity](../science/model.md#3-available-work-and-its-quadratic-coefficient).
+**Source pointers.** Watrous §§5.1–5.2, including Theorems 5.15 and 5.38; [entropy and logarithm conventions](WATROUS_BRIDGE.md#entropy-and-the-available-work); [Gibbs relative-entropy identity](../science/model.md#3-available-work-and-its-quadratic-coefficient).
 
 ### M08: Separate a temperature change from nonthermality
 
@@ -328,7 +328,7 @@ The sole educational anchor is **John Watrous, *The Theory of Quantum Informatio
 
 **Central question.** How can a finite calculation illuminate the theorem without replacing its proof?
 
-**Understanding target.** Explain sorting type populations against energy-shell capacities, preserving exact ties, and evaluating work through a positive sum. Distinguish exact integer counting from rounded probability arithmetic and observed numerical agreement from a uniform theorem or crossover law.
+**Understanding target.** Explain sorting type populations against energy-shell capacities, preserving exact ties, and evaluating work through a positive sum. Interpret finite checks of the detuning sandwich and actual thermodynamic benchmark. Distinguish exact integer counting from rounded probability arithmetic and observed numerical agreement from a uniform theorem or crossover law.
 
 **Dependencies and story role.** M04, M11, M13, M21, M26. The general result reconnects to a fully specified example and its finite evidence.
 
@@ -336,38 +336,38 @@ The sole educational anchor is **John Watrous, *The Theory of Quantum Informatio
 
 **Source pointers.** [Small complete swap](WATROUS_BRIDGE.md#a-complete-three-copy-swap); [finite rearrangement and numerical meaning](../science/qutrit.md#4-finite-rearrangement); [near-tie behavior](../science/qutrit.md#3-why-exact-onset-needs-a-qualification).
 
-### M28: Assumptions that change the conclusion
+### M28: Entropy bounds the cost of changing the energy objective
 
-**Central question.** Which changes to the model can destroy the inverse-square threshold?
+**Central question.** How can the same input be compared under harmonic and detuned Hamiltonians without a shrinking-gap assumption?
 
-**Understanding target.** Explain the coherent one-copy counterexample, the changed exponents for a tangent perturbation, and the roles of positive temperature and a fixed energy lattice. Distinguish these mechanisms from harmless energy degeneracy within the stated model.
+**Understanding target.** For a matched top-level tilt, explain $`t=\delta-\beta\epsilon`$, $`W_\epsilon=W_0+\epsilon L`$ and $`D(\sigma\Vert P)=\delta L-\beta W_\epsilon`$. Connect marginal entropy, binary data processing and Pinsker to $`D\ge2L^2/n`$ and the exact uniform sandwich. Explain why the proof measurement adds no feedback resource to the operation.
 
-**Dependencies and story role.** M05, M08, M11, M20, M26. The theorem is placed inside its consequential boundaries.
+**Dependencies and story role.** M03, M06–M07, M20–M21. The information toolkit controls a change of physical objective after the fixed-lattice converse has been established.
 
-**Conceptual connection.** Each assumption supports a specific proof step: spectral alignment, quadratic normalization, positive clipping width, or a uniform many-copy gap.
+**Conceptual connection.** A small one-copy spectral change can have extensive energy effect, but entropy constrains how much occupation a useful unitary can move.
 
-**Source pointers.** [Boundary bridge](WATROUS_BRIDGE.md#the-theorem-its-resources-and-its-boundaries); [coherence](../science/interpretation.md#3-diagonality-is-essential); [transverse derivative](../science/interpretation.md#4-the-transverse-derivative-fixes-the-exponent); [temperature and lattice](../science/interpretation.md#5-fixed-temperature-and-fixed-energy-lattice).
+**Source pointers.** Watrous §§5.1–5.2; [entropy-comparison bridge](WATROUS_BRIDGE.md#comparing-actual-and-harmonic-work-by-entropy); [finite all-unitary comparison](../science/qutrit_transfer.md#3-an-entropy-comparison-for-the-actual-matched-state).
 
-### M29: Identify the quantitative strengthening
+### M29: Combine inherited bounds using the actual benchmark
 
-**Central question.** What does this result add to the established endpoint, concentration methods, and related qutrit work?
+**Central question.** Which fixed-rational result transfers to the specified matched detuning, and why does the order-delta example survive?
 
-**Understanding target.** Distinguish a sufficient inverse-square exponent from a constant-factor threshold excluding every smaller-order block sequence. Explain the role of removing the extensive bandwidth factor, the specified quarter yield, and the extension to finite commensurate spectra and transverse paths, while crediting the inherited methods and shared question.
+**Understanding target.** Credit CWT's log-free converse and QWA's one-third construction separately. Verify that their fixed-rational combination gives $`N_f=\Theta(\delta^{-2})`$ for $`0\lt f\le1/3`$. For $`\epsilon=\nu\delta^{3/2}`$, connect the actual benchmark, the harmonic-to-actual ratio tending to one and the vanishing normalized comparison error to $`N_{1/10}=\Theta(\delta^{-2})`$. Retain the order-$`\delta`$ two-copy counterexample without inferring a full crossover law.
 
-**Dependencies and story role.** M12, M17, M20–M21, M26–M28. This identifies the contribution at the level supported by the proof and comparison.
+**Dependencies and story role.** M08–M09, M12, M20–M21, M26–M28. The inherited results and new finite comparison become one correctly normalized consequence.
 
-**Conceptual connection.** A logarithmic gap can preserve an exponent while leaving physically different block sequences unresolved.
+**Conceptual connection.** Transferring a work bound and transferring a recovered fraction require different checks because the Hamiltonian also defines the benchmark.
 
-**Source pointers.** [Meaning of the converse](../science/interpretation.md#6-meaning-of-the-strengthened-converse); [concurrent comparison](../references/RELATED_WORK.md#concurrent-work); [surviving statement and attribution](../references/RELATED_WORK.md#the-surviving-statement).
+**Source pointers.** [Fixed-rational attribution](../science/qutrit_transfer.md#2-the-fixed-rational-reconciliation); [actual normalization](../science/qutrit_transfer.md#4-normalize-by-the-actual-hamiltonian); [matched-path threshold](../science/qutrit_transfer.md#5-the-specified-matched-detuning-threshold); [two-copy boundary](../science/qutrit_transfer.md#6-keep-the-order-delta-two-copy-boundary); [related-work comparison](../references/RELATED_WORK.md#concurrent-work).
 
-### M30: Integrate the two thresholds and their meaning
+### M30: Integrate the thresholds, assumptions and scientific ownership
 
-**Central question.** How do the assumptions, converse, construction, and example fit into one account of collective work?
+**Central question.** How do spectral opportunity, probability mass and thermodynamic normalization fit into one account of collective work?
 
-**Understanding target.** Explain why first activation has order $`\delta^{-1}`$ while a quarter of the available mean work requires and admits order $`\delta^{-2}`$ copies. State what is held fixed, which claim covers every unitary, and which permutation proves sufficiency. Separate this block-size result from gate complexity, duration, reliable work, and an optimal crossover function.
+**Understanding target.** Explain the general fixed-lattice activation scale $`\Theta(\delta^{-1})`$ and quarter-yield scale $`\Theta(\delta^{-2})`$, together with the fixed-rational qutrit corollary and the specified matched-detuning result. Distinguish the moving path's two-copy activation from its useful-yield threshold. Identify which assumptions support spectral alignment, transverse quadratic normalization and a uniform gap, and how coherence or a tangent perturbation changes the conclusion. State inherited ownership and separate block size from gate complexity, duration, reliable work and a full crossover function.
 
-**Dependencies and story role.** M12–M29. This integrates the narrative and its limits without adding another isolated ingredient.
+**Dependencies and story role.** M12–M29. This integrates the entire narrative, its assumptions and the limits of the transferred conclusion.
 
-**Conceptual connection.** Rare spectral opportunities and probability-weighted usefulness are different operational questions; spectral order, information, and integer transport jointly resolve their relation here.
+**Conceptual connection.** Rare or low-gap spectral opportunities and probability-weighted usefulness are different operational questions; spectral order, information and integer transport connect them only under checked hypotheses.
 
-**Source pointers.** [Theorem and resources bridge](WATROUS_BRIDGE.md#the-theorem-its-resources-and-its-boundaries); [exact theorem](../science/model.md#4-exact-threshold-theorem); [physical interpretation](../science/interpretation.md); [attribution](../references/RELATED_WORK.md#the-surviving-statement).
+**Source pointers.** [Theorem and resources bridge](WATROUS_BRIDGE.md#the-theorem-its-resources-and-its-boundaries); [exact general theorem](../science/model.md#4-exact-threshold-theorem); [physical boundaries](../science/interpretation.md); [matched qutrit account](../science/qutrit_transfer.md); [attribution](../references/RELATED_WORK.md#the-surviving-statement).

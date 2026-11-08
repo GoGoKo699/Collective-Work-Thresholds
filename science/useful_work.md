@@ -21,12 +21,11 @@ The index $`j`$ labels individual energy eigenvectors, so repeated $`z_j`$ are p
 Define
 
 ```math
-f_j=\frac{p'_{0,j}}{q_j},\qquad
-V=\mathrm{Var}_q(E),\qquad
-c=\mathrm{Cov}_q(E,f),\qquad
-u_j=q_j\left[f_j-\frac{c}{V}(E_j-\mathbb E_q E)\right],
-\qquad
-v=\sum_j\frac{u_j^2}{q_j}\gt 0.
+\begin{aligned}
+f_j&=\frac{p'_{0,j}}{q_j},\qquad V=\mathrm{Var}_q(E),\qquad c=\mathrm{Cov}_q(E,f),\\
+u_j&=q_j\left[f_j-\frac{c}{V}(E_j-\mathbb E_q E)\right],\qquad
+v=\sum_j\frac{u_j^2}{q_j}\gt0.
+\end{aligned}
 ```
 
 The assumption $`v\gt 0`$ is transversality to the Gibbs-temperature curve, as in the [model](model.md). Let $`q_\delta`$ be the positive-temperature Gibbs state with $`S(q_\delta)=S(p_\delta)`$, defined locally near zero. Put

@@ -58,27 +58,20 @@ That distinction is a relevant conceptual antecedent. The present task fixes the
 
 ## Concurrent work
 
-The contemporaneous **Quantum-Work-Activation** research note (November 4, 2026; [project repository](https://github.com/GoGoKo699/Quantum-Work-Activation)) develops the same isolated mean-work block-size problem for near-Gibbs qutrits. Its rational-spectrum argument uses a clipped passive reference, concentration, and an energy-bandwidth estimate. The initial note is an unpublished derivation with remaining proof work, rather than a peer-reviewed result.
+[Quantum-Work-Activation](https://github.com/GoGoKo699/Quantum-Work-Activation) develops the same isolated mean-work block-size problem for near-Gibbs qutrits, with additional fixed-irrational and calibration results. Its inspected [one-third construction](https://github.com/GoGoKo699/Quantum-Work-Activation/blob/3fb4500d87acdb60746e10a9a5ae5917a2b698ec/science/achievability.md) and [two-copy boundary](https://github.com/GoGoKo699/Quantum-Work-Activation/blob/3fb4500d87acdb60746e10a9a5ae5917a2b698ec/science/calibration.md) are inherited ingredients with their own proofs. These are repository research results, not claims of peer-reviewed publication.
 
-For a sufficiently small fixed fraction its rational-qutrit statement has the form
+The directly shared content includes the operational question, rational exponent two, passive-clipping entry point and distinction between activation and useful mean work. QWA's earlier rational converse used an extensive energy-bandwidth factor and left a logarithmic gap. This repository's [bandwidth-free converse](../science/passive_clipping.md#4-the-uniform-work-bound) removes that loss. Combined with QWA's one-third construction, it gives
 
 ```math
-\frac{c}{\delta^2\log(1/\delta)}
-\le N_f(\delta)\le \frac{C}{\delta^2},
-\qquad
-W_n(\delta)\le Cn\,e^{-c/(n\delta^2)}.
+N_f(\delta;\alpha)=\Theta(\delta^{-2}),
+\qquad \alpha\gt1\text{ fixed rational},\quad0\lt f\le1/3.
 ```
 
-The directly shared content includes the operational question, rational exponent two, passive-clipping entry point, and distinction between activation and useful mean work. Those are not presented here as an unrelated discovery.
+**CWT supplies the inherited all-unitary necessity; QWA supplies the inherited one-third sufficiency.** Their combination is a reconciliation, not another discovery of either ingredient. The [qutrit account](../science/qutrit_transfer.md#2-the-fixed-rational-reconciliation) verifies the transversality and fixed-lattice hypotheses. The general CWT quarter-yield result retains the broader scope of arbitrary fixed finite commensurate spectra, degeneracies and transverse diagonal $`C^2`$ paths.
 
-| Compared feature | Quantitative conclusion of this account |
-|---|---|
-| Energy-bandwidth factor in the mean-work estimate | Removed by the order/relative-entropy comparison |
-| Logarithmic gap in the necessary block size | Closed: every $`n=o(\delta^{-2})`$ has vanishing yield |
-| Unspecified sufficiently small useful fraction | A rigorously constructed 25% fraction |
-| Rational qutrit and one exponential tilt | Every fixed finite commensurate spectrum, including degeneracies, and every transverse diagonal $`C^2`$ path |
+The additional joint step is a finite entropy comparison between actual detuned work and harmonic work on the same matched input. It yields $`N_{1/10}(\delta;2+\nu\delta^{3/2})=\Theta(\delta^{-2})`$ for fixed $`\beta,\nu\gt0`$, after checking the actual equal-entropy Gibbs benchmark. The [full local account](../science/qutrit_transfer.md) states and proves that implication; QWA's [matched-detuning account](https://github.com/GoGoKo699/Quantum-Work-Activation/blob/main/science/matched_detuning.md) develops the complementary spectral-arithmetic perspective.
 
-The companion investigation also considers irrational energy ratios. Those claims are outside the theorem proved here and are not used as proof dependencies. All fixed-lattice statements in this repository have self-contained proofs.
+QWA's order-$`\delta`$ example with $`N_{1/10}=2`$ remains intact. The new matched path theorem supplies neither a full crossover law nor a classification by the rational/irrational status of each moving parameter. QWA's fixed-irrational conclusions retain their own hypotheses and are not used as proof dependencies here.
 
 ## The surviving statement
 

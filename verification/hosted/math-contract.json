@@ -66,9 +66,111 @@
     },
     {
       "path": "learning/WATROUS_BRIDGE.md",
-      "index": 206,
+      "index": 232,
       "source_sha256": "9f86569b112c8687d050740fa33171bf5aa3c64661b4921e2881602a7a202ab8",
       "expected_text": "Nact(δ)=Θ(δ−1),N1/4(δ)=Θ(δ−2)."
+    },
+    {
+      "path": "README.md",
+      "index": 14,
+      "source_sha256": "4303a2f9f5cad6ea19b9163c11f13967ed5601ee9cd9bcbba18127102bb19fca",
+      "expected_text": "\n  \n    N\n    \n      1\n      \n        /\n      \n      10\n    \n  \n  (\n  δ\n  ;\n  2\n  +\n  ν\n  \n    δ\n    \n      3\n      \n        /\n      \n      2\n    \n  \n  )\n  =\n  Θ\n  (\n  \n    δ\n    \n      −\n      2\n    \n  \n  )\n  ,\n  \n    \n  \n  β\n  ,\n  ν\n  >\n  0\n   \n  fixed\n  .\n"
+    },
+    {
+      "path": "science/qutrit_transfer.md",
+      "index": 2,
+      "source_sha256": "1d679f8b16ac21a9fe10edbe06fa6568fd87e7179f3db397d9956d1f113e4066",
+      "expected_text": "\n  \n    H\n    α\n  \n  =\n  \n    diag\n  \n  (\n  0\n  ,\n  1\n  ,\n  α\n  )\n  ,\n  \n    \n  \n  K\n  =\n  \n    diag\n  \n  (\n  0\n  ,\n  0\n  ,\n  1\n  )\n  ,\n  \n    \n  \n  \n    ρ\n    \n      δ\n      ,\n      α\n    \n  \n  =\n  \n    \n      e\n      \n        −\n        β\n        \n          H\n          α\n        \n        +\n        δ\n        K\n      \n    \n    \n      Z\n      \n        δ\n        ,\n        α\n      \n    \n  \n  ,\n  \n    \n  \n  α\n  >\n  1\n  ,\n  \n    \n  \n  δ\n  >\n  0.\n"
+    },
+    {
+      "path": "science/qutrit_transfer.md",
+      "index": 9,
+      "source_sha256": "9ff47e32bb1ab98d64079010d19ff43e8bae0083d698db4e4673f32c5571e817",
+      "expected_text": "\n  \n    N\n    f\n  \n  (\n  δ\n  ;\n  α\n  )\n  =\n  min\n  {\n  n\n  ≥\n  1\n  :\n  \n    W\n    n\n  \n  (\n  δ\n  ;\n  α\n  )\n  ≥\n  f\n  n\n  \n    w\n    ∞\n  \n  (\n  δ\n  ;\n  α\n  )\n  }\n  .\n"
+    },
+    {
+      "path": "science/qutrit_transfer.md",
+      "index": 12,
+      "source_sha256": "7b7caa831ca5b3ca3548061d5598affc8ee7b196bfe7fee7a462720486ca5eb3",
+      "expected_text": "\n  \n    \n      \n        \n          \n            N\n            f\n          \n          (\n          δ\n          ;\n          α\n          )\n          =\n          Θ\n          (\n          \n            δ\n            \n              −\n              2\n            \n          \n          )\n          .\n        \n      \n    \n  \n"
+    },
+    {
+      "path": "science/qutrit_transfer.md",
+      "index": 21,
+      "source_sha256": "1d342cde5f2d8ca959a2cfb0af5f59896687b90d49bbefb6c9d9bf7901c8734b",
+      "expected_text": "\n  \n    R\n    \n      α\n      ,\n      β\n    \n  \n  =\n  \n    \n      Var\n    \n    \n      γ\n    \n  \n  (\n  K\n  )\n  −\n  \n    \n      \n        \n          Cov\n        \n        \n          γ\n        \n      \n      (\n      \n        H\n        α\n      \n      ,\n      K\n      \n        )\n        2\n      \n    \n    \n      \n        \n          Var\n        \n        \n          γ\n        \n      \n      (\n      \n        H\n        α\n      \n      )\n    \n  \n  >\n  0.\n"
+    },
+    {
+      "path": "science/qutrit_transfer.md",
+      "index": 27,
+      "source_sha256": "f5a4451dc33e702a728ae4b1795149c72c6abae50ac9635e6cfb3854c78a492c",
+      "expected_text": "\n  \n    ρ\n    \n      δ\n      ,\n      2\n      +\n      ϵ\n    \n  \n  =\n  \n    ρ\n    \n      t\n      ,\n      2\n    \n  \n  .\n"
+    },
+    {
+      "path": "science/qutrit_transfer.md",
+      "index": 29,
+      "source_sha256": "cc2b8ce63362be5b296f67fe33aa5e042491891660b48597c5d93f06a446e0f1",
+      "expected_text": "\n  \n    \n      \n        \n          \n            W\n            n\n          \n          (\n          t\n          ;\n          2\n          )\n          ≤\n          \n            W\n            n\n          \n          (\n          δ\n          ;\n          2\n          +\n          ϵ\n          )\n          ≤\n          \n            W\n            n\n          \n          (\n          t\n          ;\n          2\n          )\n          +\n          \n            1\n            2\n          \n          n\n          ϵ\n          δ\n          .\n        \n      \n    \n  \n"
+    },
+    {
+      "path": "science/qutrit_transfer.md",
+      "index": 36,
+      "source_sha256": "0ae5bff9fa89a0816af1493b2f92164819418ce0be5979561d0812984b612f91",
+      "expected_text": "\n  \n    W\n    ϵ\n  \n  (\n  U\n  )\n  =\n  \n    W\n    0\n  \n  (\n  U\n  )\n  +\n  ϵ\n  L\n  ,\n  \n    \n  \n  D\n  (\n  σ\n  ‖\n  P\n  )\n  =\n  δ\n  L\n  −\n  β\n  \n    W\n    ϵ\n  \n  (\n  U\n  )\n  =\n  t\n  L\n  −\n  β\n  \n    W\n    0\n  \n  (\n  U\n  )\n  .\n"
+    },
+    {
+      "path": "science/qutrit_transfer.md",
+      "index": 39,
+      "source_sha256": "caa89ad433aafa9664d4af6467afe5a007dd5975bd45d79363f0d76a23d9df8c",
+      "expected_text": "\n  \n    \n      \n        D\n        (\n        σ\n        ‖\n        P\n        )\n      \n      \n        \n        ≥\n        \n          ∑\n          j\n        \n        D\n        (\n        \n          σ\n          j\n        \n        ‖\n        \n          ρ\n          \n            δ\n            ,\n            2\n            +\n            ϵ\n          \n        \n        )\n        ,\n      \n    \n    \n      \n        \n          ∑\n          j\n        \n        D\n        (\n        \n          σ\n          j\n        \n        ‖\n        \n          ρ\n          \n            δ\n            ,\n            2\n            +\n            ϵ\n          \n        \n        )\n      \n      \n        \n        ≥\n        2\n        \n          ∑\n          j\n        \n        \n          \n            (\n            \n              Tr\n            \n            [\n            K\n            (\n            \n              ρ\n              \n                δ\n                ,\n                2\n                +\n                ϵ\n              \n            \n            −\n            \n              σ\n              j\n            \n            )\n            ]\n            )\n          \n          2\n        \n        ≥\n        \n          \n            2\n            \n              L\n              2\n            \n          \n          n\n        \n        .\n      \n    \n  \n"
+    },
+    {
+      "path": "science/qutrit_transfer.md",
+      "index": 46,
+      "source_sha256": "16ede937f26a1860fc58a6f4e5d7c4a3a28519df8274b1c41f4a2bb140a57655",
+      "expected_text": "\n  \n    w\n    ∞\n  \n  (\n  δ\n  ;\n  α\n  )\n  =\n  \n    \n      R\n      \n        α\n        ,\n        β\n      \n    \n    \n      2\n      β\n    \n  \n  \n    δ\n    2\n  \n  +\n  O\n  (\n  \n    δ\n    3\n  \n  )\n"
+    },
+    {
+      "path": "science/qutrit_transfer.md",
+      "index": 47,
+      "source_sha256": "a67d6d8335873901c6fed879421b707ec0a651f7c0e98d632319053c16c9125f",
+      "expected_text": "\n  x\n  =\n  \n    e\n    \n      −\n      β\n    \n  \n  ,\n  \n    \n  \n  \n    Z\n    0\n  \n  =\n  1\n  +\n  x\n  +\n  \n    x\n    2\n  \n  ,\n  \n    \n  \n  \n    R\n    2\n  \n  =\n  \n    \n      x\n      2\n    \n    \n      \n        Z\n        0\n      \n      (\n      1\n      +\n      4\n      x\n      +\n      \n        x\n        2\n      \n      )\n    \n  \n  ,\n  \n    \n  \n  \n    γ\n    1\n  \n  =\n  \n    x\n    \n      Z\n      0\n    \n  \n  .\n"
+    },
+    {
+      "path": "science/qutrit_transfer.md",
+      "index": 51,
+      "source_sha256": "b566b9c0eb0eb9714073c386388b3b5cb6f4c0eaa4fc3a3e8747840d89d1510e",
+      "expected_text": "\n  \n    w\n    ∞\n  \n  (\n  δ\n  ;\n  2\n  +\n  ϵ\n  )\n  =\n  \n    \n      R\n      2\n    \n    \n      2\n      β\n    \n  \n  \n    δ\n    2\n  \n  +\n  O\n  (\n  \n    δ\n    3\n  \n  )\n  ,\n  \n    \n  \n  \n    w\n    ∞\n  \n  (\n  t\n  ;\n  2\n  )\n  =\n  \n    \n      R\n      2\n    \n    \n      2\n      β\n    \n  \n  \n    t\n    2\n  \n  +\n  O\n  (\n  \n    t\n    3\n  \n  )\n  .\n"
+    },
+    {
+      "path": "science/qutrit_transfer.md",
+      "index": 52,
+      "source_sha256": "5ed12f84fc99198a0ff117747676f6351ba8b6c993e0dc1fa4e2cfdbfab5b2fa",
+      "expected_text": "\n  \n    \n      \n        w\n        ∞\n      \n      (\n      t\n      ;\n      2\n      )\n    \n    \n      \n        w\n        ∞\n      \n      (\n      δ\n      ;\n      2\n      +\n      ϵ\n      )\n    \n  \n  =\n  1\n  −\n  2\n  β\n  ν\n  \n    δ\n  \n  +\n  O\n  (\n  δ\n  )\n  .\n"
+    },
+    {
+      "path": "science/qutrit_transfer.md",
+      "index": 53,
+      "source_sha256": "909c512904c356e7c43a2498698f4724d33273770281f0f82e57080373a6f68a",
+      "expected_text": "\n  \n    \n      ϵ\n      δ\n    \n    \n      2\n      \n        w\n        ∞\n      \n      (\n      δ\n      ;\n      2\n      +\n      ϵ\n      )\n    \n  \n  =\n  \n    \n      β\n      ν\n    \n    \n      R\n      2\n    \n  \n  \n    δ\n  \n  +\n  O\n  (\n  \n    δ\n    \n      3\n      \n        /\n      \n      2\n    \n  \n  )\n  .\n"
+    },
+    {
+      "path": "science/qutrit_transfer.md",
+      "index": 56,
+      "source_sha256": "9968ac8949ad1030a7bae1f4a95a216fe5159dfda463bf4e9e73d244a18f3594",
+      "expected_text": "\n  \n    \n      \n        \n          \n            N\n            \n              1\n              \n                /\n              \n              10\n            \n          \n          (\n          δ\n          ;\n          2\n          +\n          ν\n          \n            δ\n            \n              3\n              \n                /\n              \n              2\n            \n          \n          )\n          =\n          Θ\n          (\n          \n            δ\n            \n              −\n              2\n            \n          \n          )\n          .\n        \n      \n    \n  \n"
+    },
+    {
+      "path": "science/qutrit_transfer.md",
+      "index": 73,
+      "source_sha256": "9bc91bec9f3875c05f472abe9efc61aa01e9735eb695e6814ae3c6474de27f77",
+      "expected_text": "\n  \n    W\n    2\n  \n  (\n  δ\n  ;\n  2\n  +\n  ϵ\n  )\n  =\n  ϵ\n  \n    \n      x\n      2\n    \n    \n      (\n      1\n      +\n      x\n      +\n      \n        x\n        2\n      \n      \n        e\n        t\n      \n      \n        )\n        2\n      \n    \n  \n  (\n  \n    e\n    t\n  \n  −\n  1\n  )\n  .\n"
+    },
+    {
+      "path": "science/qutrit_transfer.md",
+      "index": 78,
+      "source_sha256": "f4cbd616d5187cdef59c10e9747151886cc2037671d0047d76ba771cbe3ec8d9",
+      "expected_text": "\n  \n    \n      \n        W\n        2\n      \n      (\n      δ\n      ;\n      2\n      +\n      ν\n      \n        δ\n        \n          3\n          \n            /\n          \n          2\n        \n      \n      )\n    \n    \n      2\n      \n        w\n        ∞\n      \n      (\n      δ\n      ;\n      2\n      +\n      ν\n      \n        δ\n        \n          3\n          \n            /\n          \n          2\n        \n      \n      )\n    \n  \n  =\n  β\n  ν\n  (\n  1\n  +\n  3\n  \n    γ\n    1\n  \n  )\n  \n    δ\n  \n  +\n  O\n  (\n  δ\n  )\n  ⟶\n  0.\n"
     }
   ]
 }

@@ -227,6 +227,12 @@ async function run(args) {
               window.scrollTo(0,0);
             });
             await page.waitForTimeout(1000);
+            await article.evaluate(async root=>{
+              const ready=()=>[...root.querySelectorAll('math-renderer')].every(host=>host.querySelector('math'));
+              const deadline=Date.now()+30000;
+              while(!ready()&&Date.now()<deadline)await new Promise(resolve=>setTimeout(resolve,100));
+              if(!ready())throw new Error('Hosted mathematics did not initialize within 30 seconds');
+            });
             Object.assign(item,await article.evaluate(inspectArticle,expected[source.path]));
             const html=prefix+'.html',png=prefix+'.png';
             fs.writeFileSync(path.join(output,html),await page.content());

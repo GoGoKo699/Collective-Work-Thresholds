@@ -7,11 +7,10 @@ The question is how large a jointly controlled block must be to recover a fixed 
 Let a fixed finite Hamiltonian have a nonconstant commensurate spectrum. After an irrelevant constant energy shift, write
 
 ```math
-H=\sum_{j=1}^d E_j|j\rangle\langle j|,
-\qquad E_j=gz_j,\qquad
-z_j\in\mathbb Z_{\ge0},\qquad
-\min_jz_j=0,\qquad \gcd(z_1,\ldots,z_d)=1,
-\qquad g\gt 0.
+\begin{aligned}
+H&=\sum_{j=1}^d E_j|j\rangle\langle j|,\qquad E_j=gz_j,\qquad g\gt0,\\
+z_j&\in\mathbb Z_{\ge0},\qquad \min_jz_j=0,\qquad \gcd(z_1,\ldots,z_d)=1.
+\end{aligned}
 ```
 
 The index labels individual basis states, so distinct indices can have the same energy. The Hamiltonian, dimension and lattice spacing are fixed while the perturbation tends to zero.
@@ -135,6 +134,10 @@ n(\delta)\delta^2\longrightarrow0
 The lower bound applies to every fixed positive yield fraction. The explicit construction proves sufficiency for one quarter, and therefore also gives $`N_f=\Theta(\delta^{-2})`$ for every fixed $`0\lt f\le1/4`$. No monotonicity of $`W_n/n`$ is assumed.
 
 All constants may depend on the fixed Hamiltonian, temperature and local path. The theorem supplies neither an optimal leading constant nor a crossover function. It is not uniform over a shrinking lattice spacing or changing dimension.
+
+For the top-level-tilted qutrit subfamily shared with Quantum-Work-Activation, that project's inherited one-third construction combines with this converse to give $`N_f=\Theta(\delta^{-2})`$ for every fixed rational spectrum and $`0\lt f\le1/3`$. The [qutrit connection](qutrit_transfer.md#2-the-fixed-rational-reconciliation) checks its hypotheses and credits both ingredients. This sharper qutrit yield does not replace the broad quarter-yield theorem for arbitrary finite spectra and transverse paths.
+
+The same [connection](qutrit_transfer.md#5-the-specified-matched-detuning-threshold) proves the separate matched path $`\alpha_\delta=2+\nu\delta^{3/2}`$ at yield $`1/10`$. Its finite entropy comparison transfers a fixed-harmonic result; it does not apply the fixed-lattice theorem uniformly to a moving lattice.
 
 ## 5. Proof route
 
