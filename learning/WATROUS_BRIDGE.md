@@ -13,6 +13,7 @@ The educational anchor is **John Watrous, _The Theory of Quantum Information_, C
 | [§2.1.1–2 and §2.2.3](https://cs.uwaterloo.ca/~watrous/TQI/TQI.2.pdf) | Density matrices, independent copies and unitary operations become a model of mean work. |
 | [§4.3.1–2, especially Theorem 4.28](https://cs.uwaterloo.ca/~watrous/TQI/TQI.4.pdf) | Doubly stochastic matrices and majorization explain why passive sorting solves the unitary optimization. |
 | [§5.1 and §5.2.1–2, especially Propositions 5.19–5.22](https://cs.uwaterloo.ca/~watrous/TQI/TQI.5.pdf) | Entropy invariance, additivity and relative-entropy positivity become thermodynamic energy bounds. |
+| [§§5.1–5.2, Theorems 5.15, 5.35 and 5.38](https://cs.uwaterloo.ca/~watrous/TQI/TQI.5.pdf) | Data processing and Pinsker bound a collective occupation change, allowing actual and harmonic work to be compared. |
 | [§1.2.2, Theorem 1.16](https://cs.uwaterloo.ca/~watrous/TQI/TQI.1.pdf) | Concentration of bounded independent variables controls product likelihoods while the state itself approaches equilibrium. |
 
 ### Translate notation before using entropy as energy
@@ -458,6 +459,37 @@ Their product is
 
 This proves a quarter yield with slack at one fixed inverse-square block scale. It does not optimize the necessary prefactor or the implemented control.
 
+## Comparing actual and harmonic work by entropy
+
+The fixed-lattice converse cannot simply be reused for every moving spectrum. A new comparison is needed, and Watrous's entropy tools provide it. Consider the top-level-tilted qutrit $`H_{2+\epsilon}=\mathrm{diag}(0,1,2+\epsilon)`$, $`K=\mathrm{diag}(0,0,1)`$ and the input $`\rho\propto e^{-\beta H_{2+\epsilon}+\delta K}`$. It is exactly the harmonic input with effective tilt $`t=\delta-\beta\epsilon`$. The input probabilities agree, but the physical energy objectives differ.
+
+Write $`P=\rho^{\otimes n}`$, $`\sigma=UPU^\dagger`$, and $`L=\mathrm{Tr}[K_n(P-\sigma)]`$. The logarithm of this product input and entropy invariance give
+
+```math
+D(\sigma\Vert P)=\delta L-\beta W_\epsilon(U),
+\qquad W_\epsilon(U)=W_0(U)+\epsilon L.
+```
+
+The quantity $`L`$ is the decrease of the expected number of top-level occupations. The product-reference divergence is at least the sum of its marginal divergences. Measuring the binary occupation observable in the proof can only reduce those divergences, by data processing; Pinsker in natural logarithms then gives
+
+```math
+D(\sigma\Vert P)\ge2\sum_j d_j^2\ge2L^2/n,
+\qquad d_j=\mathrm{Tr}[K(\rho-\sigma_j)].
+```
+
+For an actual-work optimizer, $`W_\epsilon\ge0`$, so $`0\le L\le n\delta/2`$. The harmonic optimizer also has $`L\ge0`$ when $`t\gt0`$. Thus, for $`\epsilon\ge0`$ and $`t\gt0`$,
+
+```math
+W_n(t;2)\le W_n(\delta;2+\epsilon)
+\le W_n(t;2)+n\epsilon\delta/2.
+```
+
+This is an information bound on arbitrary coherent outputs, not a protocol requiring measured feedback. The book's base-two Pinsker coefficient becomes the factor two above after multiplying its relative entropy by $`\ln2`$.
+
+For $`\epsilon=\nu\delta^{3/2}`$ with fixed positive $`\beta,\nu`$, the actual benchmark remains $`R_2\delta^2/(2\beta)+O(\delta^3)`$. The harmonic benchmark at $`t`$ divided by that actual benchmark tends to one, while the normalized additive error is $`O(\sqrt\delta)`$, uniformly in the block size. CWT's inherited harmonic converse and QWA's inherited harmonic one-third construction therefore imply $`N_{1/10}=\Theta(\delta^{-2})`$ on this specified path. The [qutrit transfer account](../science/qutrit_transfer.md) proves the entropy estimate, actual normalization and minimum-block quantifiers together.
+
+The [inherited order-delta two-copy example](../science/qutrit_transfer.md#6-keep-the-order-delta-two-copy-boundary) remains compatible: at $`\epsilon=\delta/(8\beta)`$ the normalized error no longer vanishes, and two copies recover more than one tenth eventually. At order $`\delta^{3/2}`$ two copies are still active, but their recovered fraction tends to zero. One-copy continuity, early activation and useful yield are three different statements.
+
 ## The theorem, its resources and its boundaries
 
 The two arguments now meet. For a fixed nonconstant finite Hamiltonian with commensurate energy levels, fixed $`\beta\gt0`$, and a positive diagonal $`C^2`$ input path $`p_\delta`$ with $`p_0=q_\beta`$ and $`v\gt0`$,
@@ -481,5 +513,5 @@ The lower useful-block bound holds for every fixed positive fraction. The constr
 
 The [physical interpretation](../science/interpretation.md) gives the concrete scope counterexamples. An incommensurate spectrum or a Hamiltonian varying with the perturbation can have shrinking product gaps, so the fixed-lattice proof cannot be transferred by continuity of a one-copy energy ratio.
 
-The scientific attribution is separate from the single educational anchor. The equal-entropy endpoint, collective type-shift methods and ordering-preserving passivity comparisons have research antecedents detailed in [related work](../references/RELATED_WORK.md). The concurrent [Quantum-Work-Activation comparison](../references/RELATED_WORK.md#concurrent-work) also shares the rational-qutrit question and passive-clipping entry point. The quantitative strengthening here removes the extensive bandwidth factor from the converse, closes the logarithmic gap for every subcritical block sequence, and matches it with a quarter-yield construction for general fixed finite commensurate spectra and transverse diagonal paths. The companion's irrational-spectrum claims are outside this theorem and are not proof dependencies.
+The scientific attribution is separate from the single educational anchor. The equal-entropy endpoint, collective type-shift methods and ordering-preserving passivity comparisons have research antecedents detailed in [related work](../references/RELATED_WORK.md). The [Quantum-Work-Activation comparison](../references/RELATED_WORK.md#concurrent-work) shares the rational-qutrit question and passive-clipping entry point. Its one-third construction combines with the converse here to give the fixed-rational qutrit law for every fixed fraction up to one third. Each ingredient retains its ownership. The quantitative strengthening here removes the extensive bandwidth factor from the converse, closes the logarithmic gap for every subcritical block sequence, and matches it with a quarter-yield construction for general fixed finite commensurate spectra and transverse diagonal paths. The companion's irrational-spectrum claims are outside this theorem and are not proof dependencies.
 

@@ -50,6 +50,10 @@ $`p_\delta=(1/3-\delta,1/3+2\delta,1/3-\delta)`$, one copy already yields $`3\de
 
 For a fixed commensurate Hamiltonian, all product energies retain the same lower gap bound $`g`$. An incommensurate spectrum can have increasingly small many-copy differences, so the proof does not extend by replacing a rational energy ratio with a nearby irrational one. A Hamiltonian varying with $`\delta`$ can likewise invalidate uniform constants. Arithmetic dependence is the related subject of [Quantum-Work-Activation](https://github.com/GoGoKo699/Quantum-Work-Activation); its irrational-spectrum conclusions are not required or established here.
 
+A changing spectrum must therefore be checked with its own comparison and its actual thermodynamic normalization. The [matched-detuning account](qutrit_transfer.md) does this for $`H_{\alpha_\delta}=\mathrm{diag}(0,1,2+\nu\delta^{3/2})`$ with its matched Gibbs tilt. Entropy bounds the change in total top-level occupation by $`n\delta/2`$ for every work-extracting unitary. Its energy contribution is at most $`n\nu\delta^{5/2}/2`$, a vanishing fraction of the actual $`\Theta(n\delta^2)`$ benchmark. Thus $`N_{1/10}=\Theta(\delta^{-2})`$ on that specified path.
+
+This does not remove the order-$`\delta`$ failure of uniformity. QWA's exact example $`\alpha_\delta=2+\delta/(8\beta)`$ has $`N_{1/10}=2`$ eventually. On the order-$`\delta^{3/2}`$ path two copies are also active, but recover a fraction tending to zero. First activation and useful yield remain distinct, with their activation scales depending on which fixed or moving family is being considered. No full crossover function follows.
+
 ## 6. Meaning of the strengthened converse
 
 An inverse-square sufficient scale already appears in collective concentration and finite-size thermodynamic reasoning. The quantitative issue addressed here is whether a global unitary could harvest a useful mean from rare spectra at any smaller block scale. The [relative-entropy comparison](passive_clipping.md) rules out every subcritical sequence, including blocks only logarithmically below $`\delta^{-2}`$.
